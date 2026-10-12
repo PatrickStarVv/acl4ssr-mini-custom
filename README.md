@@ -7,21 +7,21 @@
 | 流量 | 策略组 |
 |---|---|
 | 局域网、白名单、GoogleCN、SteamCN、微软规则集、国内流量 | 🌐 本地直连 |
-| Gemini 规则集、Google AI Studio | ✨ Gemini |
+| Gemini 规则集 | ✨ Gemini |
 | Telegram、通用外网服务，包括 ChatGPT | 🚀 节点选择 |
 | 广告及应用内广告 | 🛡️ 广告拦截 |
 | 未匹配流量 | 🐟 漏网之鱼 |
 
 规则按配置顺序匹配。`ProxyMedia` 和 `ProxyLite` 覆盖范围不同，均保留。
 
-`⚡ 自动选择` 使用 `fallback`，当前节点不可用时按候选顺序回退，不按最低延迟选节点。测速成功仅代表测试地址可达。
+`⚡ 自动选择` 使用 `fallback`：每 200 秒检测一次，检测超时为 5 秒；当前节点不可用时按候选顺序回退，不按最低延迟选节点。测速成功仅代表测试地址可达。
 
 ## 使用方法
 
 1. 在订阅转换服务中使用 `ACL4SSR_Mini_Custom.ini`，输出格式选择 Clash。节点筛选、重命名和排序由转换参数控制。
 2. 将转换后的订阅链接导入 Clash Verge，使用规则模式，通过系统代理或 TUN 接管流量。
-3. 在 Gemini 组中选择可用节点，AI Studio 页面与 Gemini API 使用同一策略组。
-4. 更新 GitHub 配置后，更新 Clash Verge 当前订阅，确认 `aistudio.google.com` 指向 Gemini 组。
+3. 根据实际需要选择“节点选择”和“Gemini”组中的节点。
+4. 更新 GitHub 配置后，更新 Clash Verge 当前订阅，检查生成的规则和代理组设置。
 
 ## 订阅转换模板
 
